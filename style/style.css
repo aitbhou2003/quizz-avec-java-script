@@ -64,7 +64,6 @@ body {
   width: 70vw;
   height: 60vh;
   background-color: #ff7e7e;
-  gap: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -73,9 +72,9 @@ body {
   border-radius: 10px;
 }
 
-.choixs label {
+#choix1,#choix2,#choix3,#choix4 {
   width: 80%;
-  height: 30vh;
+  height: 70vh;
   background-color: #4a7be5;
   border-radius: 10px;
   color: white;
@@ -83,9 +82,14 @@ body {
   font-style: italic;
   font-size: 1em;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-
+#choix1:hover,#choix2:hover,#choix3:hover,#choix4:hover {
+  background-color: #3666d4;
+  transform: scale(1.02);
+}
 .all{
   display: flex;
   flex-direction: row;
@@ -94,12 +98,7 @@ body {
   margin-inline: 5vw;
 }
 
-.all i{
-  font-size: xx-large;
-  padding: 10px;
-  background-color: aqua;
-  border-radius: 10px;
-}
+
 
 #next, #prev{
   background-color: #58b3ff;
