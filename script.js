@@ -5,6 +5,9 @@ let questions = [["1 - Which of these players have 5 ballon'd'or", "Zidane Zined
 ["3 - Which of these players won the world cup?", "Ronaldo", "Cristiano Ronaldo", "Zinedine Zidane", "Diego Maradona"],
 ["4 - How Much Times Has Lionel Messi Won The World Cup?", "1", "2", "3", "never"], ["5 - What is the best team you think in the world?", "Barcelona FC", "Liverpool FC", "Bayern Munich FC", "Real Madrid FC"]];
 
+
+let reponsesVraies = ["Lionel Messi", "Cristiano Ronaldo", "Diego Maradona", "never", "Barcelona FC"];
+
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 
@@ -43,18 +46,24 @@ next.addEventListener('click', function () {
     if (counter > 0) {
         document.getElementById('prev').style.display = 'block';
     }
+    if (counter == 4) {
+        next.innerText = 'Termini';
+    }
 
 })
 
 
 prev.addEventListener('click', function () {
+    
     document.getElementById('question').innerHTML = questions[counter - 1][0];
     document.getElementById('choix1').innerHTML = questions[counter - 1][1];
     document.getElementById('choix2').innerHTML = questions[counter - 1][2];
     document.getElementById('choix3').innerHTML = questions[counter - 1][3];
     document.getElementById('choix4').innerHTML = questions[counter - 1][4];
     counter--;
+
 })
+
 
 
 
